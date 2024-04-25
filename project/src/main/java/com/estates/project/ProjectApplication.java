@@ -15,9 +15,9 @@ public class ProjectApplication {
 			@Override
 			public void addCorsMappings(CorsRegistry registry) {
 				registry.addMapping("/**")
-						.allowedOrigins("http://localhost:5173")
-						.allowedMethods("GET", "POST", "PATCH", "PUT", "DELETE");
-						//.allowedHeaders("Access-Control-Request-Headers", "Access-Control-Request-Method", "X-Requested-With", "Access-Control-Allow-Headers");
+						.allowedOrigins("http://loadbalancer-977948301.eu-west-2.elb.amazonaws.com:5173")
+						.allowedMethods("GET", "POST", "PATCH", "PUT", "DELETE")
+						.allowedHeaders("*");
 			}
 		};
 	}
